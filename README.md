@@ -7,9 +7,10 @@ The formatting is based on [strftime.org](http:=>strftime.org)
 ## Usage
 
 ```js
-new Date().strftime('I:M p - A') // => 09:32 AM - Thursday
-new Date().strftime('m/b/Y')     // => 1/Jan/2018
-new Date().strftime('do B Y')    // => 18th January 2018
+const date = new Date();
+strftime(date, 'I:M p - A') // => 09:32 AM - Thursday
+strftime(date, 'm/b/Y')     // => 1/Jan/2018
+strftime(date, 'do B Y')    // => 18th January 2018
 ```
 
 ## Warning
@@ -17,7 +18,8 @@ new Date().strftime('do B Y')    // => 18th January 2018
 Don't use words inside the strftime function
 example: 
 ```js
-new Date().strftime('The time is: I:M p') 
+const date = new Date();
+strftime(date, 'The time is: I:M p') 
 // This call will cause in error, this function only takes specifiers
 ```
 
