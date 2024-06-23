@@ -1,11 +1,11 @@
 {
-  "name": "strftime-prec",
+  "name": "strftime",
   "version": "0.5.4",
   "description": "lightweight ruby-like strftime date formatting implementation",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": ["/dist"],
+  "repository": "https://github.com/sharon-xa/strftime.git",
+  "author": "sharon-xa",
   "scripts": {
+    "compile": "rm -rf dist/lib && tsc && tsc --build tsconfig.es5.json",
     "test": "jest"
   },
   "devDependencies": {

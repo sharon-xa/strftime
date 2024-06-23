@@ -1,0 +1,32 @@
+{
+  "name": "@sharon-xa/strftime",
+  "version": "0.5.5",
+  "description": "lightweight ruby-like strftime date formatting implementation",
+  "main": "lib/es5/index.js",
+  "types": "lib/es6/index.js",
+  "sideEffects": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sharon-xa/strftime.git"
+  },
+  "files": [
+    "lib",
+    "LICENSE",
+    "package.json",
+    "README.md"
+  ],
+  "keywords": [
+    "date",
+    "format",
+    "typescript",
+    "library",
+    "web",
+    "node"
+  ],
+  "author": "sharon-xa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sharon-xa/strftime/issues"
+  },
+  "homepage": "https://github.com/sharon-xa/strftime#readme"
+}
