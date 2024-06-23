@@ -25,4 +25,3 @@ function ord(num: number): string {
     }
 
 };
-

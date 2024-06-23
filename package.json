@@ -5,7 +5,7 @@
   "repository": "https://github.com/sharon-xa/strftime.git",
   "author": "sharon-xa",
   "scripts": {
-    "compile": "rm -rf dist/lib && tsc && tsc --build tsconfig.es5.json",
+    "compile": "rm -rf ./dist/lib && tsc && tsc --build tsconfig.es5.json",
     "test": "jest"
   },
   "devDependencies": {

@@ -20,9 +20,13 @@ check_version_change() {
 
 check_version_change
 
+echo ""
 echo "Building the library..."
-tsc 
+npm run compile
 
+
+echo ""
+echo "Publishing the library..."
 npm publish
 
 exit 0

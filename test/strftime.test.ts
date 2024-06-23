@@ -1,8 +1,7 @@
 import { describe, expect, test } from '@jest/globals';
-import strftime from '../src/index';
-import { exportedForTesting } from "../src/index";
 import { DateFormat } from '../src/types';
-const { isDateValid, pad, ord, formatDateTime } = exportedForTesting;
+import { strftime } from "../src/strftime/index"
+// import { numbersManipulationForTesting } from '../src/strftime/numbersManipulation';
 
 describe('formatDateTime', () => {
   let formats: DateFormat;
