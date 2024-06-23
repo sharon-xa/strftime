@@ -1,4 +1,4 @@
-# strftime.js
+# strftime-prec
 
 Ruby-like strftime method implementation in Javascript without the percentage notation.
 
