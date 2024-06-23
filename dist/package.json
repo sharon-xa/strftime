@@ -1,6 +1,6 @@
 {
   "name": "@sharon-xa/strftime",
-  "version": "0.5.8",
+  "version": "0.6.0",
   "description": "lightweight ruby-like strftime date formatting implementation",
   "main": "lib/es5/index.js",
   "module": "lib/es6/index.js",
@@ -27,6 +27,5 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sharon-xa/strftime/issues"
-  },
-  "homepage": "https://github.com/sharon-xa/strftime#readme"
+  }
 }
