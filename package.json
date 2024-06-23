@@ -1,6 +1,6 @@
 {
   "name": "strftime",
-  "version": "0.5.4",
+  "version": "0.5.6",
   "description": "lightweight ruby-like strftime date formatting implementation",
   "repository": "https://github.com/sharon-xa/strftime.git",
   "author": "sharon-xa",
