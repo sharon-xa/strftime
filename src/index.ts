@@ -5,19 +5,17 @@
 Author: https://github.com/sharon-xa
 Description: silly strftime function implementation in js without the percentage notation.
              based off https://strftime.org
-
 */
 import { DateFormat } from "./types";
 
-// Pads a number with zeros to a specified length.
-// returns The padded number as a string.
-export function pad(originalNum: number, padSize: number = 2): string {
+// Pads a number with zeros to a specified length (e.g., 02, 004).
+function pad(originalNum: number, padSize: number = 2): string {
   const paddedString = Array(padSize).join('0') + originalNum;
   return paddedString.substring(paddedString.length - padSize);
 };
 
 // Returns the ordinal suffix for a number (e.g., 'st', 'nd', 'rd', 'th').
-export function ord(num: number): string {
+function ord(num: number): string {
   const stringOfNumber: string = num.toString();
   const lastDigit: number = parseInt(stringOfNumber[stringOfNumber.length - 1]);
   const secondLastDigit: number = parseInt(stringOfNumber[stringOfNumber.length - 2]);
@@ -39,8 +37,7 @@ export function ord(num: number): string {
 };
 
 // Checks if a given value is a valid Date object.
-// Returns true if the value is a valid Date object and represents a valid date; otherwise, false.
-export function isDateValid(date: any): boolean {
+function isDateValid(date: any): boolean {
 
   if (date instanceof Date && !isNaN(date.getTime()))
     return true
@@ -48,12 +45,14 @@ export function isDateValid(date: any): boolean {
   return false
 }
 
-// Extends the Date prototype to format a date and time string based on the specified format.
-// Throws an error if the provided date is invalid.
-export function strftime(date: Date, format = "c"): string {
+/**
+  * Extends the Date prototype to format a date and time string based on the specified format.
+  * Throws an error if the provided date is invalid.
+  */
+export default function strftime(date: Date, format = "c"): [string, Error | null] {
 
   if (!isDateValid(date)) {
-    throw new Error('Invalid date provided');
+    return ["", new Error("Invalid date provided")]
   }
 
   const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -87,14 +86,13 @@ export function strftime(date: Date, format = "c"): string {
     X: date.toLocaleTimeString()
   };
 
-  return formatDateTime(format, formats);
+  return [formatDateTime(format, formats), null]
 };
 
-// Formats a date and time string based on the provided format string and formats object.
-// format - The format string specifying how date and time should be formatted.
-// formats - An object containing mappings for date and time format tokens.
-// The formatted date and time string according to the format.
-export function formatDateTime(format: string, formats: DateFormat): string {
+/**
+  * Formats a date and time string based on the provided format string and token mappings from the formats object.
+  */
+function formatDateTime(format: string, formats: DateFormat): string {
   const formattedDateTime: string[] = [];
 
   format.split(/(\w|.)/m).forEach((type: string | number): void => {
@@ -110,3 +108,9 @@ export function formatDateTime(format: string, formats: DateFormat): string {
   return formattedDateTime.join("");
 }
 
+export const exportedForTesting = {
+  formatDateTime,
+  ord,
+  pad,
+  isDateValid,
+}

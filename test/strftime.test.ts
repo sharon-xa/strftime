@@ -1,6 +1,8 @@
 import { describe, expect, test } from '@jest/globals';
-import { pad, ord, isDateValid, formatDateTime, strftime } from "../src/index";
+import strftime from '../src/index';
+import { exportedForTesting } from "../src/index";
 import { DateFormat } from '../src/types';
+const { isDateValid, pad, ord, formatDateTime } = exportedForTesting;
 
 describe('formatDateTime', () => {
   let formats: DateFormat;
