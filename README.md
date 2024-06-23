@@ -23,7 +23,7 @@ new Date().strftime('The time is: I:M p')
 
 ## Available Specifiers
 
-#### Date 
+### Date 
   `a` => Short day name (e.g., Mon)<br>
   `A` => Full day name (e.g., Monday)<br>
   `w` => Day of the week (0-6, where 0 is Sunday)<br>
@@ -38,7 +38,7 @@ new Date().strftime('The time is: I:M p')
   `Y` => Full year (e.g., 2022)<br>
   `x` => Localized date string (e.g., "6/22/2023")<br>
 
-#### Time
+### Time
   `H` => Hours (0-23)<br>
   `h` => Padded hours (00-23)<br>
   `I` => 12-hour format (01-12)<br>
@@ -51,6 +51,6 @@ new Date().strftime('The time is: I:M p')
   `f` => Milliseconds<br>
   `X` => Localized time string (e.g., "1:45:30 PM")<br>
 
-#### Date and Time
+### Date and Time
   `c` => Date and time string (e.g., "Thu Jun 22 2023 - 13:45:30 GMT+0100 (GMT+01:00)")<br>
 
