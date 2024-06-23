@@ -1,0 +1,19 @@
+{
+  "name": "strftime",
+  "version": "0.5.0",
+  "description": "lightweight ruby-like strftime date formatting implementation",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["/dist"],
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.5",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.2"
+  }
+}
