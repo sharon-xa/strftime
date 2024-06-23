@@ -1,9 +1,9 @@
 {
   "name": "@sharon-xa/strftime",
-  "version": "0.5.6",
+  "version": "0.5.8",
   "description": "lightweight ruby-like strftime date formatting implementation",
   "main": "lib/es5/index.js",
-  "types": "lib/es6/index.js",
+  "module": "lib/es6/index.js",
   "sideEffects": false,
   "repository": {
     "type": "git",
