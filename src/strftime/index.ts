@@ -2,9 +2,24 @@ import { DateFormat } from "../types";
 import { pad, ord } from "./numbersManipulation";
 
 /**
-  * Extends the Date prototype to format a date and time string based on the specified format.
-  * Throws an error if the provided date is invalid.
-  */
+ * Formats a date and time string based on the specified format.
+ * Returns a tuple containing the formatted date string and an error (if any).
+ *
+ * @param {Date} date - The date object to be formatted.
+ * @param {string} [format="c"] - The format string specifying the desired date and time format.
+ * @returns {[string, Error | null]} A tuple where the first element is the formatted date string 
+ *                                   and the second element is an error object if the date is invalid, 
+ *                                   otherwise null.
+ *
+ * @example
+ * // Example usage:
+ * const [formattedDate, error] = strftime(new Date(), "Y-m-d H:i:s");
+ * if (error) {
+ *   console.error(error.message);
+ * } else {
+ *   console.log(formattedDate); // Output: "2024-06-23 15:45:30"
+ * }
+ */
 export function strftime(date: Date, format = "c"): [string, Error | null] {
 
   if (!isDateValid(date)) {
