@@ -27,6 +27,7 @@ npm run compile
 
 echo ""
 echo "Publishing the library..."
+cd dist/
 npm publish
 
 exit 0
