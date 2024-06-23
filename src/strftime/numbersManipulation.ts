@@ -1,11 +1,11 @@
 // Pads a number with zeros to a specified length (e.g., 02, 004).
-function pad(originalNum: number, padSize: number = 2): string {
+export function pad(originalNum: number, padSize: number = 2): string {
   const paddedString = Array(padSize).join('0') + originalNum;
   return paddedString.substring(paddedString.length - padSize);
 };
 
 // Returns the ordinal suffix for a number (e.g., 'st', 'nd', 'rd', 'th').
-function ord(num: number): string {
+export function ord(num: number): string {
   const stringOfNumber: string = num.toString();
   const lastDigit: number = parseInt(stringOfNumber[stringOfNumber.length - 1]);
   const secondLastDigit: number = parseInt(stringOfNumber[stringOfNumber.length - 2]);
