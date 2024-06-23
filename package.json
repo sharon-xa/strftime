@@ -1,6 +1,6 @@
 {
   "name": "strftime-prec",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description": "lightweight ruby-like strftime date formatting implementation",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
