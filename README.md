@@ -14,11 +14,11 @@ new Date().strftime('do B Y')    // => 18th January 2018
 
 ## Warning
 
-Don't use words inside the string
+Don't use words inside the strftime function
 example: 
 ```js
 new Date().strftime('The time is: I:M p') 
-// This code will cause in error, this library only takes specifiers
+// This call will cause in error, this function only takes specifiers
 ```
 
 ## Available Specifiers
